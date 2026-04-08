@@ -26,7 +26,7 @@ RUN addgroup --system appuser \
 WORKDIR /app
 
 COPY --from=builder /opt/venv /opt/venv
-COPY . .
+COPY main.py .
 
 RUN chown -R appuser:appuser /app
 
